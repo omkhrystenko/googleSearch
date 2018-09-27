@@ -11,12 +11,18 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import page.GoogleMainPage;
 
+/**
+ *Common class for test group classes.
+ */
 public class CheckSearchBaseTest {
     WebDriver driver;
     WebDriverWait driverWait;
 
     GoogleMainPage googleMainPage;
 
+    /**
+     * Make preconditions before each method run.
+     */
     @Parameters({"browserName"})
     @BeforeMethod
     public void beforeMethod(@Optional("chrome") String browserName) throws Exception {
@@ -40,11 +46,11 @@ public class CheckSearchBaseTest {
 
     }
 
+    /**
+     * Make postconditions after each method.
+     */
     @AfterMethod(alwaysRun = true)
     public void afterMethod(){
-        driver.quit();
+       driver.quit();
     }
-
-
-
 }

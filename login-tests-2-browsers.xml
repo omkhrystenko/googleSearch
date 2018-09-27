@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <!-- XML который запускает тесты сразу в не скольких браузерах-->
-<suite name="Search Google Suite" verbose="1" parallel="tests" > <!-- значение false отключает паралельное выполнение тестов-->
+<suite name="Search Google Suite" verbose="1" parallel="false" > <!-- значение false отключает паралельное выполнение тестов-->
 
 
     <test name="FireFox" >
